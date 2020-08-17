@@ -330,14 +330,37 @@
 
       
         
-          <h1 id="重载（Overloading）"><a href="#重载（Overloading）" class="headerlink" title="重载（Overloading）"></a>重载（Overloading）</h1><h6 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h6><p>方法重载时让类以统一的方式处理不同类型数据的一种手段。多个同名函数同时存在，具有不同的参数和类型。重载是一个类中多态性的一种表现。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/08/17/%E3%80%90Java%E5%9F%BA%E7%A1%80%E3%80%91%E9%87%8D%E8%BD%BD%E4%B8%8E%E9%87%8D%E5%86%99/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <a id="more"></a>
+
+<h1 id="重载（Overloading）"><a href="#重载（Overloading）" class="headerlink" title="重载（Overloading）"></a>重载（Overloading）</h1><h6 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h6><p>方法重载时让类以统一的方式处理不同类型数据的一种手段。多个同名函数同时存在，具有不同的参数和类型。重载是一个类中多态性的一种表现。</p>
+<!-- more -->
+
+<p>多态性体现在，调用方法时通过给这些重载方法传递不同的参数个数和参数类型来决定具体使用哪个方法，这就是多态性。</p>
+<p>重载其实在Java中很常见，比如使用String.valueOf()时，根据里面传递的参数调用相应的方法，这样用户可以只用记住一个方法名将不同的数据类型转换成String类型。</p>
+<h6 id="重载的规则"><a href="#重载的规则" class="headerlink" title="重载的规则"></a>重载的规则</h6><ol>
+<li>必须具有不同的参数列表</li>
+<li>可以由不同的返回类型</li>
+<li>可以有不同的访问修饰符</li>
+<li>可以跑出不同的异常</li>
+</ol>
+<p>规则1是必须的才能实现重载，而规则2~4可选且不是必要的。</p>
+<h1 id="重写"><a href="#重写" class="headerlink" title="重写"></a>重写</h1><h6 id="是什么-1"><a href="#是什么-1" class="headerlink" title="是什么"></a>是什么</h6><p>重写一般发生在以下场景：</p>
+<ol>
+<li>子类继承父类时，子类可以对父类的方法进行重写</li>
+<li>子类继承抽象父类时，必须要重写父类的所有抽象方法</li>
+<li>实现接口的时候要实现接口内的所有方法</li>
+</ol>
+<p>这也是多态性的一种体现。</p>
+<h6 id="重写规则"><a href="#重写规则" class="headerlink" title="重写规则"></a>重写规则</h6><ol>
+<li>参数列表必须与被重写方法相同</li>
+<li>返回的类型必须一直与被重写方法的返回类型相同</li>
+<li>访问修饰符的限制必须要大于等于被重写方法的访问修饰符，具体规则是（public &gt; protected &gt; default &gt; private）</li>
+<li>重写方法一定不能抛出新的检测异常，或者比被重写方法的异常类型更宽泛。</li>
+</ol>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>【面试题】重载和重写的区别    <a href="https://blog.csdn.net/houwanle/article/details/82107161" target="_blank" rel="noopener">https://blog.csdn.net/houwanle/article/details/82107161</a></p>
+
+          
         
       
     </div>
@@ -476,14 +499,14 @@
 
       
         
-          <h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><h6 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h6><p>首先抽象类是一种类，有自己的构造方法，只是它不能被实例化，只能被它的子类继承。抽象类的方法可以有普通方法和成员变量。而对于子类来说它只能继承一个抽象类，且子类必须要重写抽象类里的所有抽象方法。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/08/17/%E3%80%90Java%E5%9F%BA%E7%A1%80%E3%80%91%E6%8A%BD%E8%B1%A1%E7%B1%BB%E4%B8%8E%E6%8E%A5%E5%8F%A3/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <a id="more"></a>
+
+<h1 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h1><h6 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h6><p>首先抽象类是一种类，有自己的构造方法，只是它不能被实例化，只能被它的子类继承。抽象类的方法可以有普通方法和成员变量。而对于子类来说它只能继承一个抽象类，且子类必须要重写抽象类里的所有抽象方法。</p>
+<h1 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h1><h6 id="是什么-1"><a href="#是什么-1" class="headerlink" title="是什么"></a>是什么</h6><p>接口是与类并列的一个概念，没有自己的构造方法和成员变量， 它的变量都默认被public static final修饰变成了静态常量。接口中的方法默认都是public abstract的。对于普通类来说，可以同时实现多个接口， 但是要重写接口内的所有方法。</p>
+<h1 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h1><p>接口和抽象类有什么联系和区别?    <a href="https://blog.csdn.net/qq_26465035/article/details/103161542" target="_blank" rel="noopener">https://blog.csdn.net/qq_26465035/article/details/103161542</a></p>
+
+          
         
       
     </div>
@@ -600,14 +623,25 @@
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2020/07/26/hello-world/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
+          
+            <a id="more"></a>
+
+<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>and: <a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/26625249</a></p>
+
+          
         
       
     </div>
